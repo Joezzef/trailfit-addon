@@ -1,0 +1,35 @@
+configuration:
+  public_url:
+    name: Adresse publique
+    description: L'adresse HTTPS donnée par le tunnel Cloudflare, par exemple https://trailfit.mondomaine.fr
+  smtp_host:
+    name: Serveur SMTP
+    description: Pour les e-mails de confirmation et de mot de passe, par exemple smtp.gmail.com
+  smtp_port:
+    name: Port SMTP
+    description: 587 (STARTTLS, obligatoire) ou 465 (TLS)
+  smtp_user:
+    name: Utilisateur SMTP
+  smtp_password:
+    name: Mot de passe SMTP
+    description: Pour Gmail, un mot de passe d'application
+  mail_from:
+    name: Expéditeur
+    description: Par exemple TrailFit <ton.adresse@gmail.com>
+  admin_email:
+    name: Administrateur
+    description: Ce compte devient administrateur (et seul à pouvoir utiliser la clé Garmin personnelle). S'il n'existe pas, il est créé et reçoit un e-mail pour choisir son mot de passe.
+  encryption_key:
+    name: Clé de chiffrement
+    description: Facultatif. APP_ENCRYPTION_KEY du .env du PC, pour garder la clé Garmin lors d'une reprise des données.
+  anthropic_api_key:
+    name: Clé API Claude
+    description: Facultatif. Active le coach IA.
+  site_operator:
+    name: Exploitant
+    description: Affiché sur la page « Tes données ».
+  site_contact:
+    name: Contact
+    description: Affiché sur la page « Tes données ».
+network:
+  3000/tcp: Accès direct depuis le réseau local (désactivé ; le tunnel passe par le réseau interne)

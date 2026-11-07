@@ -1,0 +1,35 @@
+configuration:
+  public_url:
+    name: Public URL
+    description: The HTTPS address served by the Cloudflare tunnel, e.g. https://trailfit.example.com
+  smtp_host:
+    name: SMTP server
+    description: Used for confirmation and password emails, e.g. smtp.gmail.com
+  smtp_port:
+    name: SMTP port
+    description: 587 (STARTTLS, required) or 465 (TLS)
+  smtp_user:
+    name: SMTP user
+  smtp_password:
+    name: SMTP password
+    description: For Gmail, an app password
+  mail_from:
+    name: Sender
+    description: e.g. TrailFit <your.address@gmail.com>
+  admin_email:
+    name: Administrator
+    description: This account becomes administrator (the only one allowed to use the personal Garmin key). If it does not exist, it is created and a password reset email is sent.
+  encryption_key:
+    name: Encryption key
+    description: Optional. APP_ENCRYPTION_KEY from the PC's .env, to keep the Garmin key readable after restoring data.
+  anthropic_api_key:
+    name: Claude API key
+    description: Optional. Enables the AI coach.
+  site_operator:
+    name: Operator
+    description: Shown on the "Your data" page.
+  site_contact:
+    name: Contact
+    description: Shown on the "Your data" page.
+network:
+  3000/tcp: Direct access from the local network (disabled; the tunnel uses the internal network)

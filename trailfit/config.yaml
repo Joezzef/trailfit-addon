@@ -1,0 +1,43 @@
+name: TrailFit
+version: "0.1.1"
+slug: trailfit
+description: Carnet de renfo trail, suivi des sorties et synchro Garmin.
+arch:
+  - aarch64
+startup: application
+boot: auto
+init: false
+# la base est copiée telle quelle : l'add-on est arrêté pendant la sauvegarde (une minute, la nuit)
+backup: cold
+# temps laissé à PostgreSQL pour s'arrêter proprement
+timeout: 30
+# relance automatique si l'application ne répond plus (plantage, migration ratée…)
+watchdog: http://[HOST]:[PORT:3000]/api/health
+map:
+  - type: share
+    read_only: true
+ports:
+  3000/tcp: null
+ports_description:
+  3000/tcp: Accès direct depuis le réseau local (désactivé ; le tunnel passe par le réseau interne)
+# admin_email et les options facultatives n'ont pas de valeur par défaut : une chaîne vide serait refusée
+options:
+  public_url: ""
+  smtp_host: ""
+  smtp_port: 587
+  smtp_user: ""
+  smtp_password: ""
+  mail_from: ""
+schema:
+  public_url: url
+  smtp_host: str
+  smtp_port: port
+  smtp_user: str
+  smtp_password: password
+  mail_from: str
+  admin_email: email?
+  encryption_key: password?
+  anthropic_api_key: password?
+  site_operator: str?
+  site_contact: str?
+image: ghcr.io/joezzef/trailfit-addon-{arch}

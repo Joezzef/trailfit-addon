@@ -1,5 +1,5 @@
 name: TrailFit
-version: "0.1.11"
+version: "0.1.12"
 slug: trailfit
 description: Carnet de renfo trail, suivi des sorties et synchro Garmin.
 arch:

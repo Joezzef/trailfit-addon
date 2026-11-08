@@ -25,7 +25,7 @@ L'add-on ne démarre pas tant que l'adresse publique n'est pas remplie.
 | Option | Rôle |
 | --- | --- |
 | Adresse publique | Obligatoire. L'adresse HTTPS du tunnel Cloudflare, par exemple `https://trailfit.mondomaine.fr`. Les liens des e-mails s'en servent. |
-| Serveur, port, utilisateur et mot de passe SMTP | Envoi des e-mails (confirmation d'adresse, mot de passe oublié). Gmail : `smtp.gmail.com`, port `587` (chiffrement exigé), ton adresse et un [mot de passe d'application](https://myaccount.google.com/apppasswords). |
+| Serveur, port, utilisateur et mot de passe SMTP | Envoi des e-mails (confirmation d'adresse, mot de passe oublié). Gmail : `smtp.gmail.com`, port `587` (chiffrement exigé), ton adresse et un [mot de passe d'application](https://myaccount.google.com/apppasswords). Facultatif : sans SMTP, l'admin crée les comptes dans Profil › Mon compte › Gérer les comptes (mot de passe provisoire à transmettre) et y redonne un mot de passe en cas d'oubli. |
 | Expéditeur | Par exemple `TrailFit <ton.adresse@gmail.com>`. |
 | Administrateur | Ce compte devient administrateur, le seul à utiliser la clé Garmin personnelle. S'il n'existe pas, il est créé et reçoit un e-mail pour choisir son mot de passe (si l'envoi échoue, un mot de passe provisoire s'affiche une fois dans le journal). |
 | Clé de chiffrement | Facultatif : `APP_ENCRYPTION_KEY` du `.env` du PC, pour que la clé Garmin reprise reste lisible. Sinon, recolle ta clé dans Profil › Garmin. |

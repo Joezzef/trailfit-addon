@@ -1,5 +1,5 @@
 name: TrailFit
-version: "0.1.17"
+version: "0.1.18"
 slug: trailfit
 description: Carnet de renfo trail, suivi des sorties et synchro Garmin.
 arch:
@@ -38,6 +38,8 @@ schema:
   admin_email: email?
   encryption_key: password?
   anthropic_api_key: password?
+  coach_user_daily_usd: float(0,)?
+  coach_daily_usd: float(0,)?
   site_operator: str?
   site_contact: str?
 image: ghcr.io/joezzef/trailfit-addon-{arch}

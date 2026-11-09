@@ -29,7 +29,8 @@ L'add-on ne démarre pas tant que l'adresse publique n'est pas remplie.
 | Expéditeur | Par exemple `TrailFit <ton.adresse@gmail.com>`. |
 | Administrateur | Ce compte devient administrateur, le seul à utiliser la clé Garmin personnelle. S'il n'existe pas, il est créé et reçoit un e-mail pour choisir son mot de passe (si l'envoi échoue, un mot de passe provisoire s'affiche une fois dans le journal). |
 | Clé de chiffrement | Facultatif : `APP_ENCRYPTION_KEY` du `.env` du PC, pour que la clé Garmin reprise reste lisible. Sinon, recolle ta clé dans Profil › Garmin. |
-| Clé API Claude | Facultatif : active le coach IA. |
+| Clé API Claude | Facultatif : active le coach IA (séance du jour, semaine préparée le lundi, bilan). Clé créée sur [platform.claude.com](https://platform.claude.com/settings/keys). |
+| Plafonds du coach | Facultatif : dépense maximale par jour, par athlète (0,50 $ par défaut) et pour tout le site (3 $). Une demande coûte quelques centimes ; au-delà, le coach répond « Réessaie demain ». |
 | Exploitant, Contact | Facultatif : affichés sur la page « Tes données » (qui gère ce TrailFit, comment le joindre). |
 
 ## Tunnel Cloudflare

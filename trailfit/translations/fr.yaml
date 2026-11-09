@@ -25,6 +25,12 @@ configuration:
   anthropic_api_key:
     name: Clé API Claude
     description: Facultatif. Active le coach IA.
+  coach_user_daily_usd:
+    name: Plafond du coach par athlète ($/jour)
+    description: Facultatif. Dépense maximale du coach IA par athlète et par jour (0,50 $ par défaut).
+  coach_daily_usd:
+    name: Plafond du coach pour le site ($/jour)
+    description: Facultatif. Dépense maximale du coach IA pour tous les athlètes réunis, par jour (3 $ par défaut).
   site_operator:
     name: Exploitant
     description: Affiché sur la page « Tes données ».

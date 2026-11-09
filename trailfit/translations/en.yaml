@@ -25,6 +25,12 @@ configuration:
   anthropic_api_key:
     name: Claude API key
     description: Optional. Enables the AI coach.
+  coach_user_daily_usd:
+    name: Coach limit per athlete ($/day)
+    description: Optional. Maximum AI coach spend per athlete per day (default $0.50).
+  coach_daily_usd:
+    name: Coach limit for the site ($/day)
+    description: Optional. Maximum AI coach spend for all athletes together, per day (default $3).
   site_operator:
     name: Operator
     description: Shown on the "Your data" page.
